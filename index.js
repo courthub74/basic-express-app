@@ -8,9 +8,16 @@ const port = 3000;
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }))
 
+//For Middleware
+function mid(req, res, next) {
+    console.log(req.query);
+    console.log(req.params);
+    next();
+}
+
 //GET, PUT, POST, DELETE
 
-app.get('/photos/:id', (req, res) => {
+app.get('/photos/:id', mid, (req, res) => {
     res.status(200);
     res.json(photos.find((photos) => {
         return +req.params.id === photos.id

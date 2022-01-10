@@ -22,6 +22,7 @@ app.get('/photos/:id', mid, (req, res) => {
     res.json(photos.find((photos) => {
         return +req.params.id === photos.id
     }))
+    
     // res.send(req.params.id);
     // res.send('Hello World');
     // res.json(photos);

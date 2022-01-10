@@ -1,4 +1,4 @@
-GET http://localhost:3000/photos/1
+GET http://localhost:3000/photos/1?cour=5
 
 ###
 

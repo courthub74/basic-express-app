@@ -1,1 +1,15 @@
 GET http://localhost:3000/photos/1
+
+###
+
+POST http://localhost:3000/add
+Content-Type: application/json
+
+
+{
+      "albumId": 1,
+      "id": 5,
+      "title": "Dupa dupa dupa",
+      "url": "https://via.placeholder.com/600/d32776",
+      "thumbnailUrl": "https://via.placeholder.com/150/d32776"
+}
